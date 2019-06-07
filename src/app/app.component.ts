@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, ViewChild, ElementRef } from '@angular/core';
 
 @Component({
   selector: 'app-root',
@@ -8,13 +8,14 @@ import { Component } from '@angular/core';
 export class AppComponent {
   title = 'To do list';
   taskList = [];
-
+  
   addTask(task: string): void {
     this.taskList.push(task);
+   
   }
 
-  deleteTask(index: number){
-    this.taskList.splice(index,1);
+  deleteTask(index: number) {
+    this.taskList.splice(index, 1);
   }
 
 }
